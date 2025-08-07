@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>布局示例</title>
+    <style>
+        /* 重置默认样式，让布局更可控 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /* 宽高可根据实际需求调整，这里为了呈现效果设置固定值 */
+            width: 300px;
+            height: 300px;
+            /* 让容器居中，方便查看效果，可根据实际场景决定是否保留 */
+            margin: 50px auto;
+            /* 开启网格布局 */
+            display: grid;
+            /* 划分行列，各占1份，总共3列3行 */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            /* 网格项之间的间距，可按需调整 */
+            gap: 10px;
+        }
+
+        .link {
+            /* 让链接内部文字居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 去掉默认下划线 */
+            text-decoration: none;
+            /* 文字颜色 */
+            color: #000;
+            /* 粉色背景，可自行修改色值 */
+            background-color: pink;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .center-link {
+            background-color: #0099ff;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <a href="#" class="link link1">链接1</a>
+    <a href="#" class="link link2">链接2</a>
+    <a href="#" class="link link3">链接3</a>
+    <a href="#" class="link link4">链接4</a>
+    <a href="#" class="link center-link">链接5</a>
+</div>
+</body>
+
+</html>
